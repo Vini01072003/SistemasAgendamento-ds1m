@@ -82,6 +82,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         panelHome.setLayout(null);
 
         panelDetalhes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        panelDetalhes.setForeground(new java.awt.Color(255, 4, 61));
         panelDetalhes.setText("Detalhes do Plano de Saúde:");
         panelHome.add(panelDetalhes);
         panelDetalhes.setBounds(30, 20, 300, 30);
@@ -91,6 +92,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         panelHome.add(panelTipoDoPlano);
         panelTipoDoPlano.setBounds(30, 240, 240, 16);
 
+        panelCodigo.setBackground(new java.awt.Color(0, 0, 0));
         panelCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         panelCodigo.setText("Código:");
         panelHome.add(panelCodigo);
@@ -118,7 +120,6 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         panelHome.add(fieldTipoDoPlano);
         fieldTipoDoPlano.setBounds(30, 270, 540, 40);
 
-        buttonSalvar.setBackground(new java.awt.Color(0, 0, 0));
         buttonSalvar.setForeground(new java.awt.Color(124, 145, 254));
         buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/diskette.png"))); // NOI18N
         buttonSalvar.setToolTipText("Sair do sistema");
@@ -130,7 +131,6 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         panelHome.add(buttonSalvar);
         buttonSalvar.setBounds(690, 290, 80, 60);
 
-        buttonSair1.setBackground(new java.awt.Color(0, 0, 0));
         buttonSair1.setForeground(new java.awt.Color(124, 145, 254));
         buttonSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/exit32.png"))); // NOI18N
         buttonSair1.setToolTipText("Sair do sistema");
@@ -153,13 +153,12 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 120, 950, 380);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.setForeground(new java.awt.Color(228, 0, 124));
+        jPanel3.setBackground(new java.awt.Color(255, 4, 61));
+        jPanel3.setForeground(new java.awt.Color(204, 204, 204));
         jPanel3.setLayout(null);
 
         labelTitulo.setBackground(new java.awt.Color(0, 0, 0));
         labelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        labelTitulo.setForeground(new java.awt.Color(228, 0, 124));
         labelTitulo.setText("Plano de Saúde - Adicionar");
         jPanel3.add(labelTitulo);
         labelTitulo.setBounds(110, 30, 460, 40);

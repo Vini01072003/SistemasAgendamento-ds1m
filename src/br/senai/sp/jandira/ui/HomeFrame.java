@@ -66,11 +66,10 @@ public class HomeFrame extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 4, 61));
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(228, 0, 124));
         jLabel1.setText("Sistema para Agendamento de Consultas");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(90, 20, 740, 40);
@@ -82,6 +81,7 @@ public class HomeFrame extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 970, 80);
 
+        buttonSair.setBackground(new java.awt.Color(246, 246, 246));
         buttonSair.setForeground(new java.awt.Color(124, 145, 254));
         buttonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/exit32.png"))); // NOI18N
         buttonSair.setToolTipText("Sair do sistema");
@@ -93,14 +93,14 @@ public class HomeFrame extends javax.swing.JFrame {
         getContentPane().add(buttonSair);
         buttonSair.setBounds(875, 100, 80, 60);
 
-        buttonAgenda.setBackground(new java.awt.Color(204, 204, 204));
+        buttonAgenda.setBackground(new java.awt.Color(246, 246, 246));
         buttonAgenda.setForeground(new java.awt.Color(51, 0, 255));
         buttonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/agenda32.png"))); // NOI18N
         buttonAgenda.setToolTipText("Agenda");
         getContentPane().add(buttonAgenda);
         buttonAgenda.setBounds(110, 100, 80, 60);
 
-        buttonPlanosDeSaude.setBackground(new java.awt.Color(204, 204, 204));
+        buttonPlanosDeSaude.setBackground(new java.awt.Color(246, 246, 246));
         buttonPlanosDeSaude.setForeground(new java.awt.Color(51, 0, 255));
         buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/health-card.png"))); // NOI18N
         buttonPlanosDeSaude.setToolTipText("Planos de saúde");
@@ -112,7 +112,7 @@ public class HomeFrame extends javax.swing.JFrame {
         getContentPane().add(buttonPlanosDeSaude);
         buttonPlanosDeSaude.setBounds(470, 100, 80, 60);
 
-        buttonEspecialidades.setBackground(new java.awt.Color(204, 204, 204));
+        buttonEspecialidades.setBackground(new java.awt.Color(246, 246, 246));
         buttonEspecialidades.setForeground(new java.awt.Color(51, 0, 255));
         buttonEspecialidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/cuidados-de-saude.png"))); // NOI18N
         buttonEspecialidades.setToolTipText("Especialidades");
@@ -124,21 +124,21 @@ public class HomeFrame extends javax.swing.JFrame {
         getContentPane().add(buttonEspecialidades);
         buttonEspecialidades.setBounds(380, 100, 80, 60);
 
-        buttonPacientes.setBackground(new java.awt.Color(204, 204, 204));
+        buttonPacientes.setBackground(new java.awt.Color(246, 246, 246));
         buttonPacientes.setForeground(new java.awt.Color(51, 0, 255));
         buttonPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sick32.png"))); // NOI18N
         buttonPacientes.setToolTipText("Pacientes");
         getContentPane().add(buttonPacientes);
         buttonPacientes.setBounds(200, 100, 80, 60);
 
-        buttonMedicos.setBackground(new java.awt.Color(204, 204, 204));
+        buttonMedicos.setBackground(new java.awt.Color(246, 246, 246));
         buttonMedicos.setForeground(new java.awt.Color(51, 0, 255));
         buttonMedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/doctor32.png"))); // NOI18N
         buttonMedicos.setToolTipText("Médicos");
         getContentPane().add(buttonMedicos);
         buttonMedicos.setBounds(290, 100, 80, 60);
 
-        buttonHome.setBackground(new java.awt.Color(204, 204, 204));
+        buttonHome.setBackground(new java.awt.Color(246, 246, 246));
         buttonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/casa.png"))); // NOI18N
         buttonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +152,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelHome.setLayout(null);
 
         panelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        panelTitulo.setForeground(new java.awt.Color(228, 0, 124));
+        panelTitulo.setForeground(new java.awt.Color(255, 4, 61));
         panelTitulo.setText("SISACON");
         panelHome.add(panelTitulo);
         panelTitulo.setBounds(40, 20, 320, 50);
@@ -163,7 +163,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelDescricao.setBounds(40, 90, 360, 25);
 
         panelDadosContato.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        panelDadosContato.setForeground(new java.awt.Color(228, 0, 124));
+        panelDadosContato.setForeground(new java.awt.Color(255, 4, 61));
         panelDadosContato.setText("Dados para contato:");
         panelHome.add(panelDadosContato);
         panelDadosContato.setBounds(640, 200, 180, 20);
@@ -183,7 +183,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelHome.add(panelSite);
         panelSite.setBounds(640, 290, 240, 20);
 
-        jLabel3.setForeground(new java.awt.Color(228, 0, 124));
+        jLabel3.setForeground(new java.awt.Color(102, 0, 102));
         jLabel3.setText("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         panelHome.add(jLabel3);
         jLabel3.setBounds(40, 130, 900, 20);
@@ -197,9 +197,9 @@ public class HomeFrame extends javax.swing.JFrame {
     private void buttonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHomeActionPerformed
         panelHome.setVisible(true);
         panelPlanosDeSaude.setVisible(false);
-        buttonPlanosDeSaude.setBackground(new java.awt.Color(182,211,255));
-        buttonHome.setBackground(new java.awt.Color(242,242,242));
-        buttonEspecialidades.setBackground(new java.awt.Color(182,211,255));
+        buttonPlanosDeSaude.setBackground(new java.awt.Color(255,4,61));
+        buttonHome.setBackground(new java.awt.Color(246,246,246));
+        buttonEspecialidades.setBackground(new java.awt.Color(255,4,61));
         
     }//GEN-LAST:event_buttonHomeActionPerformed
 
@@ -207,9 +207,9 @@ public class HomeFrame extends javax.swing.JFrame {
 
         panelHome.setVisible(false);
         panelPlanosDeSaude.setVisible(true);
-        buttonPlanosDeSaude.setBackground(new java.awt.Color(242,242,242));
-        buttonHome.setBackground(new java.awt.Color(182,211,255));
-        buttonEspecialidades.setBackground(new java.awt.Color(182,211,255));
+        buttonPlanosDeSaude.setBackground(new java.awt.Color(246,246,246));
+        buttonHome.setBackground(new java.awt.Color(255,4,61));
+        buttonEspecialidades.setBackground(new java.awt.Color(255,4,61));
         
     }//GEN-LAST:event_buttonPlanosDeSaudeActionPerformed
 
@@ -221,10 +221,9 @@ public class HomeFrame extends javax.swing.JFrame {
             panelHome.setVisible(false);
             panelPlanosDeSaude.setVisible(false);
             panelEspecialidades.setVisible(true);
-            buttonPlanosDeSaude.setBackground(new java.awt.Color(182,211,255));
-            buttonHome.setBackground(new java.awt.Color(182,211,255));
-            buttonEspecialidades.setBackground(new java.awt.Color(242,242,242));
-            
+            buttonPlanosDeSaude.setBackground(new java.awt.Color(255,4,61));
+            buttonHome.setBackground(new java.awt.Color(246,246,246));
+            buttonEspecialidades.setBackground(new java.awt.Color(255,4,61));
     }//GEN-LAST:event_buttonEspecialidadesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

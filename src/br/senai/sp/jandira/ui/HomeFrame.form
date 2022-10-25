@@ -35,7 +35,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
+          <Color blue="3d" green="4" red="ff" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -52,9 +52,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7c" green="0" red="e4" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sistema para Agendamento de Consultas"/>
           </Properties>
@@ -80,6 +77,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="buttonSair">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="fe" green="91" red="7c" type="rgb"/>
         </Property>
@@ -100,7 +100,7 @@
     <Component class="javax.swing.JButton" name="buttonAgenda">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="33" type="rgb"/>
@@ -119,7 +119,7 @@
     <Component class="javax.swing.JButton" name="buttonPlanosDeSaude">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="33" type="rgb"/>
@@ -141,7 +141,7 @@
     <Component class="javax.swing.JButton" name="buttonEspecialidades">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="33" type="rgb"/>
@@ -163,7 +163,7 @@
     <Component class="javax.swing.JButton" name="buttonPacientes">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="33" type="rgb"/>
@@ -182,7 +182,7 @@
     <Component class="javax.swing.JButton" name="buttonMedicos">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="33" type="rgb"/>
@@ -201,7 +201,7 @@
     <Component class="javax.swing.JToggleButton" name="buttonHome">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/br/senai/sp/jandira/imagens/casa.png"/>
@@ -240,7 +240,7 @@
               <Font name="Segoe UI" size="48" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7c" green="0" red="e4" type="rgb"/>
+              <Color blue="3d" green="4" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="SISACON"/>
           </Properties>
@@ -269,7 +269,7 @@
               <Font name="Segoe UI" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7c" green="0" red="e4" type="rgb"/>
+              <Color blue="3d" green="4" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Dados para contato:"/>
           </Properties>
@@ -321,7 +321,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="7c" green="0" red="e4" type="rgb"/>
+              <Color blue="66" green="0" red="66" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
           </Properties>

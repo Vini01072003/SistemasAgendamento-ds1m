@@ -118,9 +118,11 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         getContentPane().setLayout(null);
 
         panelHome.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        panelHome.setForeground(new java.awt.Color(255, 4, 61));
         panelHome.setLayout(null);
 
         panelEspecialidade.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        panelEspecialidade.setForeground(new java.awt.Color(255, 4, 61));
         panelEspecialidade.setText("Detalhes da Especialidade:");
         panelHome.add(panelEspecialidade);
         panelEspecialidade.setBounds(30, 20, 300, 30);
@@ -157,8 +159,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         panelHome.add(fieldDescricaoEspecialidade);
         fieldDescricaoEspecialidade.setBounds(30, 270, 540, 40);
 
-        buttonSalvar.setBackground(new java.awt.Color(0, 0, 0));
-        buttonSalvar.setForeground(new java.awt.Color(124, 145, 254));
+        buttonSalvar.setForeground(new java.awt.Color(255, 255, 255));
         buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/diskette.png"))); // NOI18N
         buttonSalvar.setToolTipText("Sair do sistema");
         buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +170,6 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         panelHome.add(buttonSalvar);
         buttonSalvar.setBounds(690, 290, 80, 60);
 
-        buttonSair1.setBackground(new java.awt.Color(0, 0, 0));
         buttonSair1.setForeground(new java.awt.Color(124, 145, 254));
         buttonSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/exit32.png"))); // NOI18N
         buttonSair1.setToolTipText("Sair do sistema");
@@ -192,14 +192,14 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 120, 950, 380);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(255, 4, 61));
         jPanel3.setLayout(null);
 
+        labelTitulo.setBackground(new java.awt.Color(0, 0, 0));
         labelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        labelTitulo.setForeground(new java.awt.Color(228, 0, 124));
         labelTitulo.setText("Especialidade - Adicionar");
         jPanel3.add(labelTitulo);
-        labelTitulo.setBounds(110, 30, 460, 40);
+        labelTitulo.setBounds(120, 30, 460, 40);
 
         labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/cuidados-de-saude (1).png"))); // NOI18N
         jPanel3.add(labelIcon);
