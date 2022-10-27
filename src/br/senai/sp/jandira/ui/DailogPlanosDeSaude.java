@@ -121,7 +121,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         fieldTipoDoPlano.setBounds(30, 270, 540, 40);
 
         buttonSalvar.setForeground(new java.awt.Color(124, 145, 254));
-        buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/diskette.png"))); // NOI18N
+        buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/salvar (1).png"))); // NOI18N
         buttonSalvar.setToolTipText("Sair do sistema");
         buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +132,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         buttonSalvar.setBounds(690, 290, 80, 60);
 
         buttonSair1.setForeground(new java.awt.Color(124, 145, 254));
-        buttonSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/exit32.png"))); // NOI18N
+        buttonSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sair.png"))); // NOI18N
         buttonSair1.setToolTipText("Sair do sistema");
         buttonSair1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

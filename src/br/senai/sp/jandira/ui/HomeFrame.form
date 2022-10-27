@@ -37,6 +37,9 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="3d" green="4" red="ff" type="rgb"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3d" green="4" red="ff" type="rgb"/>
+        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -84,7 +87,7 @@
           <Color blue="fe" green="91" red="7c" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/exit32.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/sair.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Sair do sistema"/>
       </Properties>
@@ -106,7 +109,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/agenda32.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/agendamento.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Agenda"/>
       </Properties>
@@ -125,7 +128,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/health-card.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/plano-de-saude (2).png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Planos de sa&#xfa;de"/>
       </Properties>
@@ -147,7 +150,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/cuidados-de-saude.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/cardapio.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Especialidades"/>
       </Properties>
@@ -169,7 +172,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/sick32.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/sneeze.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Pacientes"/>
       </Properties>
@@ -188,7 +191,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/doctor32.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/equipe-medica.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="M&#xe9;dicos"/>
       </Properties>
@@ -204,7 +207,7 @@
           <Color blue="f6" green="f6" red="f6" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/casa.png"/>
+          <Image iconType="3" name="/br/senai/sp/jandira/imagens/casa_1.png"/>
         </Property>
       </Properties>
       <Events>
@@ -321,7 +324,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="0" red="66" type="rgb"/>
+              <Color blue="3d" green="4" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
           </Properties>

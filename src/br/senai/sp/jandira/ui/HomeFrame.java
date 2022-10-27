@@ -67,6 +67,7 @@ public class HomeFrame extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 4, 61));
+        jPanel1.setForeground(new java.awt.Color(255, 4, 61));
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -83,7 +84,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonSair.setBackground(new java.awt.Color(246, 246, 246));
         buttonSair.setForeground(new java.awt.Color(124, 145, 254));
-        buttonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/exit32.png"))); // NOI18N
+        buttonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sair.png"))); // NOI18N
         buttonSair.setToolTipText("Sair do sistema");
         buttonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,14 +96,14 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonAgenda.setBackground(new java.awt.Color(246, 246, 246));
         buttonAgenda.setForeground(new java.awt.Color(51, 0, 255));
-        buttonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/agenda32.png"))); // NOI18N
+        buttonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/agendamento.png"))); // NOI18N
         buttonAgenda.setToolTipText("Agenda");
         getContentPane().add(buttonAgenda);
         buttonAgenda.setBounds(110, 100, 80, 60);
 
         buttonPlanosDeSaude.setBackground(new java.awt.Color(246, 246, 246));
         buttonPlanosDeSaude.setForeground(new java.awt.Color(51, 0, 255));
-        buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/health-card.png"))); // NOI18N
+        buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/plano-de-saude (2).png"))); // NOI18N
         buttonPlanosDeSaude.setToolTipText("Planos de saúde");
         buttonPlanosDeSaude.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +115,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonEspecialidades.setBackground(new java.awt.Color(246, 246, 246));
         buttonEspecialidades.setForeground(new java.awt.Color(51, 0, 255));
-        buttonEspecialidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/cuidados-de-saude.png"))); // NOI18N
+        buttonEspecialidades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/cardapio.png"))); // NOI18N
         buttonEspecialidades.setToolTipText("Especialidades");
         buttonEspecialidades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,20 +127,20 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonPacientes.setBackground(new java.awt.Color(246, 246, 246));
         buttonPacientes.setForeground(new java.awt.Color(51, 0, 255));
-        buttonPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sick32.png"))); // NOI18N
+        buttonPacientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sneeze.png"))); // NOI18N
         buttonPacientes.setToolTipText("Pacientes");
         getContentPane().add(buttonPacientes);
         buttonPacientes.setBounds(200, 100, 80, 60);
 
         buttonMedicos.setBackground(new java.awt.Color(246, 246, 246));
         buttonMedicos.setForeground(new java.awt.Color(51, 0, 255));
-        buttonMedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/doctor32.png"))); // NOI18N
+        buttonMedicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/equipe-medica.png"))); // NOI18N
         buttonMedicos.setToolTipText("Médicos");
         getContentPane().add(buttonMedicos);
         buttonMedicos.setBounds(290, 100, 80, 60);
 
         buttonHome.setBackground(new java.awt.Color(246, 246, 246));
-        buttonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/casa.png"))); // NOI18N
+        buttonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/casa_1.png"))); // NOI18N
         buttonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonHomeActionPerformed(evt);
@@ -183,7 +184,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelHome.add(panelSite);
         panelSite.setBounds(640, 290, 240, 20);
 
-        jLabel3.setForeground(new java.awt.Color(102, 0, 102));
+        jLabel3.setForeground(new java.awt.Color(255, 4, 61));
         jLabel3.setText("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         panelHome.add(jLabel3);
         jLabel3.setBounds(40, 130, 900, 20);
@@ -198,7 +199,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelHome.setVisible(true);
         panelPlanosDeSaude.setVisible(false);
         buttonPlanosDeSaude.setBackground(new java.awt.Color(255,4,61));
-        buttonHome.setBackground(new java.awt.Color(246,246,246));
+        buttonHome.setBackground(new java.awt.Color(255,4,61));
         buttonEspecialidades.setBackground(new java.awt.Color(255,4,61));
         
     }//GEN-LAST:event_buttonHomeActionPerformed
