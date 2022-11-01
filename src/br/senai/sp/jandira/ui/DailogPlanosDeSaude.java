@@ -82,7 +82,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         panelHome.setLayout(null);
 
         panelDetalhes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        panelDetalhes.setForeground(new java.awt.Color(255, 4, 61));
+        panelDetalhes.setForeground(new java.awt.Color(0, 153, 153));
         panelDetalhes.setText("Detalhes do Plano de Saúde:");
         panelHome.add(panelDetalhes);
         panelDetalhes.setBounds(30, 20, 300, 30);
@@ -153,7 +153,7 @@ public class DailogPlanosDeSaude extends javax.swing.JDialog {
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 120, 950, 380);
 
-        jPanel3.setBackground(new java.awt.Color(255, 4, 61));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
         jPanel3.setForeground(new java.awt.Color(204, 204, 204));
         jPanel3.setLayout(null);
 

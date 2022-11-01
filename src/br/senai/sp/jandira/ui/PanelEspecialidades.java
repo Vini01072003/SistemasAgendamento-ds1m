@@ -46,7 +46,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
 
         jLabel3.setBackground(new java.awt.Color(102, 0, 102));
         jLabel3.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 4, 61));
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Especialidade");
         add(jLabel3);
         jLabel3.setBounds(20, 10, 180, 20);

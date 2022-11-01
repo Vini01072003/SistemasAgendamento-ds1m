@@ -122,7 +122,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         panelHome.setLayout(null);
 
         panelEspecialidade.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        panelEspecialidade.setForeground(new java.awt.Color(255, 4, 61));
+        panelEspecialidade.setForeground(new java.awt.Color(0, 153, 153));
         panelEspecialidade.setText("Detalhes da Especialidade:");
         panelHome.add(panelEspecialidade);
         panelEspecialidade.setBounds(30, 20, 300, 30);
@@ -192,7 +192,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 120, 950, 380);
 
-        jPanel3.setBackground(new java.awt.Color(255, 4, 61));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
         jPanel3.setLayout(null);
 
         labelTitulo.setBackground(new java.awt.Color(0, 0, 0));
