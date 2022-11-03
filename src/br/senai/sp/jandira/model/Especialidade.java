@@ -1,11 +1,16 @@
 package br.senai.sp.jandira.model;
 
 public class Especialidade {
+
+    public static void add(Especialidade novoEspecialidade) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 	
 	private String nomeEspecialidade;
 	private String descricaoEspecialidade;
         private Integer codigoEspecialidade;
 	private static int contador = 100;
+    private int codigo;
 	
         
         //Construtos da classe Especialidade
@@ -24,6 +29,14 @@ public class Especialidade {
 	public Especialidade() {
             atualizarEspecialidade();
 	}
+
+    public Especialidade(Integer valueOf, String string, String string0, String especialidade) {
+         this.codigoEspecialidade = codigoEspecialidade;
+                this.nomeEspecialidade = nomeEspecialidade;
+                this.descricaoEspecialidade = descricaoEspecialidade;
+                this.contador = this.codigo;
+        
+    }
         
         //Criando método para atualizar código 
         //Não quero que me retorne nada apenas atualize o código!    

@@ -1,13 +1,21 @@
 package br.senai.sp.jandira.dao;
 import java.util.ArrayList;
 import br.senai.sp.jandira.model.Especialidade;
+import br.senai.sp.jandira.model.PlanoDeSaude;
+import java.io.BufferedReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
         
 /**
  *
  * @author 22282099
  */
-public class EspecialidadeDAO { //Simular banco de dados fake
+public class EspecialidadeDAO { 
+
+    private static Path path;
+//Simular banco de dados fake
     
     private Especialidade especialidade; //criando uma nova variável com a Especialidade
     private static ArrayList<Especialidade> especialidades = new ArrayList<>(); //criando uma array com as especialidades
@@ -68,24 +76,24 @@ public class EspecialidadeDAO { //Simular banco de dados fake
     }
     
     //criando método especialidades "fakes" 
-    public static void criarEspecialidadesTeste(){
-        Especialidade e1 = new Especialidade("Pediatria", 
-                "Atendimento dedicado a crianças e adolescentes");
-        
-        Especialidade e2 = new Especialidade("Clínico Geral", 
-                "Atendimento a todas as áreas");
-        
-        Especialidade e3 = new Especialidade("Dermatologia",
-                "Atendimento dedicado a doenças presentes na pele");
-        
-        Especialidade e4 = new Especialidade("Cardiologia", 
-                "Atendimento dedicado a doenças no coração");
-        
-        //adicionando as especialidades criadas manualmente dentro da ArrayList através do método ADD.()
-        especialidades.add(e1);
-        especialidades.add(e2);
-        especialidades.add(e3);
-        especialidades.add(e4);
+    public static void ListagetEspecialidades(){
+        try {
+             BufferedReader br = Files.newBufferedReader(path);
+             
+             String linha = br.readLine();
+                   while(linha != null) {
+                    String[] linhaVetor = linha.split(";");
+                    Especialidade novoEspecialidade = new Especialidade (
+                    Integer.valueOf(linhaVetor[0]),
+                            linhaVetor[1],
+                            linhaVetor[2]);
+                    Especialidade.add(novoEspecialidade);
+                 linha = br.readLine(); }
+        } catch (Exception e) { JOptionPane.showMessageDialog(null, "Ocorreu um erro", 0);
+            
+            
+        }
+
     }
     
     //Criando a tabela dando as colunas e linhas através do método DefaultTableModel
