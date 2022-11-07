@@ -1,39 +1,17 @@
 package br.senai.sp.jandira.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
-public class Medico {
+public class Medico extends Pessoa {
 
-	private String nome;
-	private LocalDate dataDeNascimento;
-	private String sexo;
+	
 	private String crm;
-	private Especialidade[] especialidades;
+	private ArrayList<Especialidade>[] especialidades;
 
-	public String getNome() {
-		return nome;
-	}
+	
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public LocalDate getDataDeNascimento() {
-		return dataDeNascimento;
-	}
-
-	public void setDataDeNascimento(LocalDate dataDeNascimento) {
-		this.dataDeNascimento = dataDeNascimento;
-	}
-
-	public String getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
-
+	
 	public String getCrm() {
 		return crm;
 	}
@@ -42,11 +20,11 @@ public class Medico {
 		this.crm = crm;
 	}
 
-	public Especialidade[] getEspecialidades() {
+	public ArrayList<Especialidade>[] getEspecialidades() {
 		return especialidades;
 	}
 
-	public void setEspecialidades(Especialidade[] especialidades) {
+	public void setEspecialidades(ArrayList<Especialidade>[] especialidades) {
 		this.especialidades = especialidades;
 	}
 
