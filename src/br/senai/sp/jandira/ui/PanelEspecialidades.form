@@ -77,7 +77,7 @@
     <Component class="javax.swing.JButton" name="buttonAlterarEspecialidade">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/caneta.png"/>
+          <Image iconType="2" name="C:\Users\22282103\Downloads\editar.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Editar plano de sa&#xfa;de selecionado"/>
       </Properties>
@@ -93,7 +93,7 @@
     <Component class="javax.swing.JButton" name="buttonExcluirEspecialidade">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/excluir (1).png"/>
+          <Image iconType="2" name="C:\Users\22282103\Downloads\excluir-pasta.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Excluir plano de sa&#xfa;de selecionado"/>
       </Properties>
@@ -109,7 +109,7 @@
     <Component class="javax.swing.JButton" name="buttonAdicionarEspecialidade">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/br/senai/sp/jandira/imagens/botao-adicionar (1).png"/>
+          <Image iconType="2" name="C:\Users\22282103\Downloads\mais.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Adicionar plano de sa&#xfa;de"/>
       </Properties>

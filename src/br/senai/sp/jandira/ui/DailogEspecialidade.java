@@ -160,7 +160,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         fieldDescricaoEspecialidade.setBounds(30, 270, 540, 40);
 
         buttonSalvar.setForeground(new java.awt.Color(255, 255, 255));
-        buttonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/salvar (1).png"))); // NOI18N
+        buttonSalvar.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\salve-.png")); // NOI18N
         buttonSalvar.setToolTipText("Sair do sistema");
         buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +171,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         buttonSalvar.setBounds(690, 290, 80, 60);
 
         buttonSair1.setForeground(new java.awt.Color(124, 145, 254));
-        buttonSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/sair.png"))); // NOI18N
+        buttonSair1.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\sair.png")); // NOI18N
         buttonSair1.setToolTipText("Sair do sistema");
         buttonSair1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +192,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 120, 950, 380);
 
-        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setLayout(null);
 
         labelTitulo.setBackground(new java.awt.Color(0, 0, 0));
@@ -201,7 +201,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         jPanel3.add(labelTitulo);
         labelTitulo.setBounds(120, 30, 460, 40);
 
-        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/cuidados-de-saude (1).png"))); // NOI18N
+        labelIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\registo-medico (1).png")); // NOI18N
         jPanel3.add(labelIcon);
         labelIcon.setBounds(20, 20, 80, 70);
 

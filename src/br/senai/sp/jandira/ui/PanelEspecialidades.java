@@ -67,7 +67,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(20, 40, 910, 230);
 
-        buttonAlterarEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/caneta.png"))); // NOI18N
+        buttonAlterarEspecialidade.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\editar.png")); // NOI18N
         buttonAlterarEspecialidade.setToolTipText("Editar plano de saúde selecionado");
         buttonAlterarEspecialidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +77,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
         add(buttonAlterarEspecialidade);
         buttonAlterarEspecialidade.setBounds(770, 290, 70, 60);
 
-        buttonExcluirEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/excluir (1).png"))); // NOI18N
+        buttonExcluirEspecialidade.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\excluir-pasta.png")); // NOI18N
         buttonExcluirEspecialidade.setToolTipText("Excluir plano de saúde selecionado");
         buttonExcluirEspecialidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +87,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
         add(buttonExcluirEspecialidade);
         buttonExcluirEspecialidade.setBounds(690, 290, 70, 60);
 
-        buttonAdicionarEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/sp/jandira/imagens/botao-adicionar (1).png"))); // NOI18N
+        buttonAdicionarEspecialidade.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\mais.png")); // NOI18N
         buttonAdicionarEspecialidade.setToolTipText("Adicionar plano de saúde");
         buttonAdicionarEspecialidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
