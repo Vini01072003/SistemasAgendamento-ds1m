@@ -37,6 +37,10 @@ public class Especialidade {
                 this.contador = this.codigo;
         
     }
+
+    public Especialidade(Integer valueOf, String string, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
         
         //Criando método para atualizar código 
         //Não quero que me retorne nada apenas atualize o código!    
@@ -82,5 +86,17 @@ public class Especialidade {
 	public static int getContador() { 
 		return contador;
 	}
+
+    public Object getCodigo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getNome() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public char[] getEspecialidadeSeparadoPorPontoEVirgula() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 		
 }

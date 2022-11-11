@@ -1,72 +1,57 @@
 package br.senai.sp.jandira.dao;
 
+import br.senai.sp.jandira.model.Especialidade;
 import java.util.ArrayList;
 
 import br.senai.sp.jandira.model.PlanoDeSaude;
-import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.sound.midi.Patch;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class PlanoDeSaudeDAO { // Simular nosso banco de dados
 
+    private final static String ARQUIVO = "C:\\Users\\22282112\\Documents\\NetBeansProjects\\sistema-agendamento-completo\\src\\br\\senai\\sp\\jandira\\arquivos\\planoDeSaude.txt";
+    private final static String ARQUIVO_TEMP = "C:\\Users\\22282112\\Documents\\NetBeansProjects\\sistema-agendamento-completo\\src\\br\\senai\\sp\\jandira\\arquivos\\planoDeSaude_temp";
+    private static final Path PATH = Paths.get(ARQUIVO);
+    private static final Path PATH_TEMP = Paths.get(ARQUIVO_TEMP);
     private PlanoDeSaude planoDeSaude;
     private static ArrayList<PlanoDeSaude> planos = new ArrayList<>();
-    private Component parentComponent;
 
     public PlanoDeSaudeDAO(PlanoDeSaude planoDeSaude) {
         this.planos.add(planoDeSaude);
     }
-
-    private final String ARQUIVO = "Z:\\Java\\test.txt";
-    private final String ARQUIVO_Temp = "Z:\\Java\\plano_de_saude.temp";
-
-    private static final Path path = Path.get();
 
     public PlanoDeSaudeDAO() {
 
     }
 
     public static void gravar(PlanoDeSaude planoDeSaude) {
-        planos.add(planoDeSaude);
-    }
+        try {
+            BufferedWriter bw = Files.newBufferedWriter(
+                    PATH,
+                    StandardOpenOption.APPEND,
+                    StandardOpenOption.WRITE);
 
-    
-        try{
-            try {
-            // Gravar Planos de saude
+            bw.write(planoDeSaude.getPlanoDeSaudeSeparadoPorPontoEVirgula());
+            bw.newLine();
+            bw.close();
 
-            BufferedWriter bw = Files.newBufferedWriter(path, StandardOpenOption.APPEND, StandardOpenOption.WRITE);
         } catch (IOException ex) {
-            Logger.getLogger(PlanoDeSaudeDAO.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Ocorreu um erro ao gravar.\n\nEntre em contato com o suporte",
+                    "Erro ao gravar",
+                    JOptionPane.ERROR_MESSAGE);
         }
-    }
-    catch (IOException ex
 
-    
-        ) {
-                Logger.getLogger(PlanoDeSaudeDAO.class.getName()).log(Level.SEVERE, null, ex);
-    }
-
-    String novoPlanoDeSaude = planoDeSaude.getPlanoDeSaudeSeparadoPorPontoEVirgula();
-
-    bw.
-                          
-
-    catch(IOException ex
-
-    
-        ) {
-                   JOptionPane.showMessageDialog(parentComponent, "Erro ao criar Plano De Saude, digite novamente");
+        planos.add(planoDeSaude);
     }
 
     public static boolean excluir(Integer codigo) {
@@ -76,58 +61,70 @@ public class PlanoDeSaudeDAO { // Simular nosso banco de dados
                 break;
             }
         }
-        // Reconstruir o arquivo atualizado, ou seja, sem o plano que foi removido
-        File arquivoAtual = new File(ARQUIVO);
-        File arquivoTemp = new File(ARQUIVO_Temp);
 
-        try {
-            arquivoTemp.createNewFile();
-
-            BufferedWriter bw = Files.newBufferedWriter(PATH_Temp, StandardOpenOption.APPEND, StandardOpenOption.WRITE);
-
-            // Alterar a lista no arquivo temporário
-            for (PlanoDeSaude p : planos) {
-                bwTemp.write(p.getPlanoDeSaudeSeparadoPorPontoEVirgula());
-                bwTemp.newLine();
-            }
-            
-            bw.close();
-            
-            
-            arquivo.close
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Ocorreu um erro ao criar um arquivo", "ERRO",);
-        }
+        atualizarArquivo();
 
         return false;
     }
 
-    /**
-     *
-     * @param codigo
-     * @return
-     */
     public static PlanoDeSaude getPlanoDeSaude(Integer codigo) {
-        for (PlanoDeSaude e : planos) {
-            if (e.getCodigo().equals(codigo)) {
-                return e;
+        for (PlanoDeSaude p : planos) {
+            if (p.getCodigo().equals(codigo)) {
+                return p;
+
             }
+
         }
 
         return null;
-
     }
 
-    public static void atualizar(PlanoDeSaude planoDeSaude) {
+    public static void editar(PlanoDeSaude planoDeSaude) {
         for (PlanoDeSaude p : planos) {
             if (p.getCodigo().equals(planoDeSaude.getCodigo())) {
                 planos.set(planos.indexOf(p), planoDeSaude);
                 break;
-                
-                
-                
             }
+        }
+
+        atualizarArquivo();
+
+    }
+
+    private static void atualizarArquivo() {
+        //Reconstruir um arquivo atualizado
+        //sem o plano que foi removido
+        //Passo 1 - Criar uma representação dos arquivos que serão manipulados
+        File arquivoAtual = new File(ARQUIVO);
+        File arquivoTemp = new File(ARQUIVO_TEMP);
+
+        try {
+            //Criar o arquivo temporario
+            arquivoTemp.createNewFile();
+
+            //Abrir o arquivo temporario para escrita
+            BufferedWriter bwTemp = Files.newBufferedWriter(
+                    PATH_TEMP,
+                    StandardOpenOption.APPEND,
+                    StandardOpenOption.WRITE);
+
+            //Iterar na liosta para adicionar os planos no arquivo temporario
+            for (PlanoDeSaude p : planos) {
+                bwTemp.write(p.getPlanoDeSaudeSeparadoPorPontoEVirgula());
+                bwTemp.newLine();
+
+            }
+            //Fechar o arquivo temporario
+            bwTemp.close();
+
+            //Excluir arquivo atual - planoDeSaude
+            arquivoAtual.delete();
+
+            //Renomear o arquivo temporario
+            arquivoTemp.renameTo(arquivoAtual);
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro ao criar o arquivo!", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -135,26 +132,27 @@ public class PlanoDeSaudeDAO { // Simular nosso banco de dados
         return planos;
     }
 
-    public static void getListaPlanosDeSaude() {
+    public static void criarListaPlanoDeSaude() {
         try {
-            // Abrir o arquivo para leitura - Leitor
-            BufferedReader br = Files.newBufferedReader(path);
+            BufferedReader br = Files.newBufferedReader(PATH);
 
-            String linha = br.readLine();
+            String linha = "";
 
-            while (linha != null) {
+            // ler uma linha do arquivo e armazenar na variavel linha
+            linha = br.readLine();
+
+            while (linha != null && !linha.isEmpty()) {
                 String[] linhaVetor = linha.split(";");
-                PlanoDeSaude novoPlanoDeSaude = new PlanoDeSaude(
-                        Integer.valueOf(linhaVetor[0]),
-                        linhaVetor[1],
-                        linhaVetor[2]);
-                planos.add(novoPlanoDeSaude);
+                PlanoDeSaude p = new PlanoDeSaude(Integer.valueOf(linhaVetor[0]), linhaVetor[1], linhaVetor[2]);
+                planos.add(p);
                 linha = br.readLine();
             }
+            br.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "O arquivo planoDeSaude não existe");
 
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Ocorreu um erro", 0);
         }
+
     }
 
     public static DefaultTableModel getTableModel() {
@@ -174,9 +172,7 @@ public class PlanoDeSaudeDAO { // Simular nosso banco de dados
         }
 
         // Definir um vetor com os nomes das colulas da tabela
-        String[] titulos = {"Código",
-            "Nome da operadora",
-            "Tipo do plano"};
+        String[] titulos = {"Código", "Nome da operadora", "Tipo do plano"};
 
         // Criar o modelo que será utilizado pela JTable 
         // para exibir os dados dos planos
