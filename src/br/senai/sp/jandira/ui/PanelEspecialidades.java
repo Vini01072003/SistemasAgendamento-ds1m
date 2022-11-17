@@ -18,6 +18,7 @@ import javax.swing.JTable;
  */
 public class PanelEspecialidades extends javax.swing.JPanel {
     int linha;
+  //  public Integer getCodigo;
     
     public PanelEspecialidades() {
         initComponents();
@@ -77,7 +78,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
         add(buttonAlterarEspecialidade);
         buttonAlterarEspecialidade.setBounds(770, 290, 70, 60);
 
-        buttonExcluirEspecialidade.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\excluir-pasta.png")); // NOI18N
+        buttonExcluirEspecialidade.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\excluir-pasta.png")); // NOI18N
         buttonExcluirEspecialidade.setToolTipText("Excluir plano de saúde selecionado");
         buttonExcluirEspecialidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,19 +159,19 @@ public class PanelEspecialidades extends javax.swing.JPanel {
            
             if(resposta == 0){  
                 
-                EspecialidadeDAO.excluirEspecialidade(returnCodigo());
+                EspecialidadeDAO.excluir(getCodigo());
                 criarTabelaEspecialidades();
          }
         }   
     
-    private Integer returnCodigo(){
+    private Integer getCodigo(){
             String codigoString =  tableEspecialidades.getValueAt(linha, 0).toString();
             return Integer.valueOf(codigoString);
         }
            
      private void editar(){
     
-        Especialidade especialidade = EspecialidadeDAO.getEspecialidade(returnCodigo());
+        Especialidade especialidade = EspecialidadeDAO.getEspecialidade(getCodigo());
         
          DailogEspecialidade dialogEspecialidade = new DailogEspecialidade(
                 null, 
@@ -193,7 +194,7 @@ public class PanelEspecialidades extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void criarTabelaEspecialidades(){
-        tableEspecialidades.setModel(EspecialidadeDAO.getTableEspecialidades());
+        tableEspecialidades.setModel(EspecialidadeDAO.getTableModel());
         
         //Desativando o redimensionamento do JTable
         tableEspecialidades.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
@@ -209,5 +210,9 @@ public class PanelEspecialidades extends javax.swing.JPanel {
         //Bloquear a edição de células
         tableEspecialidades.setDefaultEditor(Object.class, null);
     }
+
+   // public Integer getCodigo() {
+       // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
     
 }

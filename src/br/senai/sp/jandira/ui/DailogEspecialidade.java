@@ -44,7 +44,13 @@ public class DailogEspecialidade extends javax.swing.JDialog {
     private void atualizarEspecialidade(){
         especialidade.setNomeEspecialidade(fieldNomeEspecialidade.getText());
         especialidade.setDescricao(fieldDescricaoEspecialidade.getText());
-        EspecialidadeDAO.atualizarEspecialidade(especialidade);
+    
+        
+
+        
+        
+        
+        
         JOptionPane.showMessageDialog(null,
                 "Especialidade atualizada com sucesso!",
                 "Especialidade",
@@ -52,16 +58,16 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         dispose();
     }
     
-    private void gravarEspecialidade(){
+    private void gravar(){
         Especialidade especialidade = new Especialidade();
         especialidade.setNomeEspecialidade(fieldNomeEspecialidade.getText());
         especialidade.setDescricao(fieldDescricaoEspecialidade.getText());
         especialidade.setNomeEspecialidade(fieldDescricaoEspecialidade.getText());
         especialidade.setDescricao(fieldDescricaoEspecialidade.getText());
         
-        if (validarEspecialidade()){
+        if (validarCadastro()){
             
-            EspecialidadeDAO.gravarEspecialidade(especialidade);
+            EspecialidadeDAO.gravar(especialidade);
             JOptionPane.showMessageDialog(this,
                     "Especialidade gravada com sucesso",
                     "Especialidade",
@@ -71,7 +77,7 @@ public class DailogEspecialidade extends javax.swing.JDialog {
         }
     }
     
-    private boolean validarEspecialidade(){
+    private boolean validarCadastro(){
         if(fieldNomeEspecialidade.getText().isEmpty()){
             JOptionPane.showMessageDialog(this,
                     "O nome da especialidade esTá vazio! Por favor preencher",
@@ -221,11 +227,6 @@ public class DailogEspecialidade extends javax.swing.JDialog {
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
 
-        if(tipoOperacaoEspecialidade == tipoOperacaoEspecialidade.ADICIONAR){
-            gravarEspecialidade();
-        } else {
-            atualizarEspecialidade();
-        }
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void buttonSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSair1ActionPerformed
@@ -251,4 +252,8 @@ public class DailogEspecialidade extends javax.swing.JDialog {
     private javax.swing.JPanel panelHome;
     private javax.swing.JLabel panelNomeEspecialidade;
     // End of variables declaration//GEN-END:variables
+
+ //   private void gravarEspecialidade() {
+    //    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
 }

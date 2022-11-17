@@ -9,17 +9,23 @@ import javax.swing.JTable;
 import br.senai.sp.jandira.ui.*;
 
 public class HomeFrame extends javax.swing.JFrame {
+    private PanelPlanosDeSaude panelPlanosDeSaude;
+    private PanelEspecialidades panelEspecialidade;
+    private MedicoPanel panelMedico;
+    
+    
+    
 
     public HomeFrame() {
         initComponents();
-        PlanoDeSaudeDAO.getListaPlanosDeSaude();
-        EspecialidadeDAO.ListagetEspecialidades();
+        PlanoDeSaudeDAO.criarListaPlanoDeSaude();
+        EspecialidadeDAO.GetListaEspecialidades();
         initPanels();
     }
     
     
     //Atributos da Classe
-    PanelPlanosDeSaude panelPlanosDeSaude = new PanelPlanosDeSaude();
+ //   PanelPlanosDeSaude panelPlanosDeSaude = new PanelPlanosDeSaude();
     
     //Criando Constantes das medidas do projeto
     private final int POS_X = 10;
@@ -84,7 +90,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonSair.setBackground(new java.awt.Color(246, 246, 246));
         buttonSair.setForeground(new java.awt.Color(124, 145, 254));
-        buttonSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\sair.png")); // NOI18N
+        buttonSair.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\sair.png")); // NOI18N
         buttonSair.setToolTipText("Sair do sistema");
         buttonSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +109,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonPlanosDeSaude.setBackground(new java.awt.Color(246, 246, 246));
         buttonPlanosDeSaude.setForeground(new java.awt.Color(51, 0, 255));
-        buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\plano-de-saude (2).png")); // NOI18N
+        buttonPlanosDeSaude.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\plano-de-saude (2).png")); // NOI18N
         buttonPlanosDeSaude.setToolTipText("Planos de saúde");
         buttonPlanosDeSaude.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +121,7 @@ public class HomeFrame extends javax.swing.JFrame {
 
         buttonEspecialidades.setBackground(new java.awt.Color(246, 246, 246));
         buttonEspecialidades.setForeground(new java.awt.Color(51, 0, 255));
-        buttonEspecialidades.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Downloads\\registo-medico (1).png")); // NOI18N
+        buttonEspecialidades.setIcon(new javax.swing.ImageIcon("C:\\Users\\22282103\\Icones -netbins\\registo-medico (1).png")); // NOI18N
         buttonEspecialidades.setToolTipText("Especialidades");
         buttonEspecialidades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +195,7 @@ public class HomeFrame extends javax.swing.JFrame {
         panelHome.add(panelSite);
         panelSite.setBounds(640, 290, 240, 20);
 
-        jLabel3.setForeground(new java.awt.Color(255, 4, 61));
+        jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
         panelHome.add(jLabel3);
         jLabel3.setBounds(40, 130, 900, 20);
@@ -216,6 +222,7 @@ public class HomeFrame extends javax.swing.JFrame {
         buttonPlanosDeSaude.setBackground(new java.awt.Color(246,246,246));
         buttonHome.setBackground(new java.awt.Color(255,4,61));
         buttonEspecialidades.setBackground(new java.awt.Color(255,4,61));
+        
         
     }//GEN-LAST:event_buttonPlanosDeSaudeActionPerformed
 

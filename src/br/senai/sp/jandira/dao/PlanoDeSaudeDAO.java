@@ -21,6 +21,14 @@ public class PlanoDeSaudeDAO { // Simular nosso banco de dados
     private final static String ARQUIVO_TEMP = "C:\\Users\\22282112\\Documents\\NetBeansProjects\\sistema-agendamento-completo\\src\\br\\senai\\sp\\jandira\\arquivos\\planoDeSaude_temp";
     private static final Path PATH = Paths.get(ARQUIVO);
     private static final Path PATH_TEMP = Paths.get(ARQUIVO_TEMP);
+
+    public static void getListaPlanosDeSaude() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public static void atualizar(PlanoDeSaude planoDeSaude) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private PlanoDeSaude planoDeSaude;
     private static ArrayList<PlanoDeSaude> planos = new ArrayList<>();
 

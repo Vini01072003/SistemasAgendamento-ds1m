@@ -87,7 +87,7 @@
           <Color blue="fe" green="91" red="7c" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\22282103\Downloads\sair.png"/>
+          <Image iconType="2" name="C:\Users\22282103\Icones -netbins\sair.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Sair do sistema"/>
       </Properties>
@@ -128,7 +128,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\22282103\Downloads\plano-de-saude (2).png"/>
+          <Image iconType="2" name="C:\Users\22282103\Icones -netbins\plano-de-saude (2).png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Planos de sa&#xfa;de"/>
       </Properties>
@@ -150,7 +150,7 @@
           <Color blue="ff" green="0" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\22282103\Downloads\registo-medico (1).png"/>
+          <Image iconType="2" name="C:\Users\22282103\Icones -netbins\registo-medico (1).png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Especialidades"/>
       </Properties>
@@ -327,7 +327,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="3d" green="4" red="ff" type="rgb"/>
+              <Color blue="99" green="99" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"/>
           </Properties>

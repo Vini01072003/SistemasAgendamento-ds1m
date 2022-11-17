@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.TableModel;
 
 public class EspecialidadeDAO {
 
@@ -21,6 +22,26 @@ public class EspecialidadeDAO {
     private final static String ARQUIVO_TEMP = "C:\\Users\\22282112\\Documents\\NetBeansProjects\\sistema-agendamento-completo\\src\\br\\senai\\sp\\jandira\\arquivos\\especialidadeTemp.txt";
     private static Path PATH = Paths.get(ARQUIVO);
     private static Path PATH_TEMP = Paths.get(ARQUIVO_TEMP);
+
+  //  public static void atualizarEspecialidade(Especialidade especialidade) {
+     //   throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //}
+
+    //public static void gravarEspecialidade(Especialidade especialidade) {
+      //  throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
+
+    // public static void ListagetEspecialidades() {
+        // throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //}
+
+    // public static void excluirEspecialidade(Integer returnCodigo) {
+   //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
+
+    // public static TableModel getTableEspecialidades() {
+    //    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    // }
     private Especialidade especialidade;
     private static ArrayList<Especialidade> especialidades = new ArrayList<>();
 

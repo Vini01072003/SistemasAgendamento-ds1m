@@ -9,6 +9,10 @@ public class Medico extends Pessoa {
 	private String crm;
 	private ArrayList<Especialidade>[] especialidades;
 
+    public Medico(Integer valueOf, String string, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 	
 
 	
@@ -27,5 +31,13 @@ public class Medico extends Pessoa {
 	public void setEspecialidades(ArrayList<Especialidade>[] especialidades) {
 		this.especialidades = especialidades;
 	}
+
+    public char[] getMedicoSeparadoporPontoEVirgula() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getCodigo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
