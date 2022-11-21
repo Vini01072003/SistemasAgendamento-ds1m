@@ -25,6 +25,7 @@ public class MedicoPanel extends javax.swing.JPanel {
         initComponents();
         criarTabelaMedico();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,52 +36,18 @@ public class MedicoPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TableMedico = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        labelmedico = new javax.swing.JLabel();
         ExcluirMedico = new javax.swing.JButton();
         AdicionarMedico = new javax.swing.JButton();
         EditarMedico = new javax.swing.JButton();
+        scrolltablemedico = new javax.swing.JScrollPane();
+        TableMedico = new javax.swing.JTable();
 
         setLayout(null);
 
-        TableMedico.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(TableMedico);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        add(jPanel1);
-        jPanel1.setBounds(0, 80, 710, 310);
-
-        jLabel1.setText("Medico");
-        add(jLabel1);
-        jLabel1.setBounds(10, 40, 280, 40);
+        labelmedico.setText("Medico");
+        add(labelmedico);
+        labelmedico.setBounds(10, 40, 280, 30);
 
         ExcluirMedico.setText("jButton1");
         ExcluirMedico.setActionCommand("AdicionarMedico");
@@ -93,22 +60,88 @@ public class MedicoPanel extends javax.swing.JPanel {
         ExcluirMedico.setBounds(430, 470, 80, 50);
 
         AdicionarMedico.setText("jButton1");
+        AdicionarMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdicionarMedicoActionPerformed(evt);
+            }
+        });
         add(AdicionarMedico);
         AdicionarMedico.setBounds(530, 470, 75, 50);
 
         EditarMedico.setText("jButton1");
+        EditarMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarMedicoActionPerformed(evt);
+            }
+        });
         add(EditarMedico);
         EditarMedico.setBounds(620, 470, 75, 50);
-    }// </editor-fold>//GEN-END:initComponents
 
+        TableMedico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        scrolltablemedico.setViewportView(TableMedico);
+
+        add(scrolltablemedico);
+        scrolltablemedico.setBounds(10, 74, 660, 260);
+    }// </editor-fold>//GEN-END:initComponents
+        
+    
+    
+    
+     private void tableMedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMedicoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tableMedicoMouseClicked
+    
+    
+    
+private void TableMedicoexcluir(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMedicoexcluir
+
+    }//GEN-LAST:event_tableMedicoexcluir
+
+
+    private void buttonExcluirMedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonExcluirMedicoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonExcluirMedicoMouseClicked
+    
     private void ExcluirMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirMedicoActionPerformed
         linha = TableMedico.getSelectedRow();
         
-        if (linha != -1) {
+        if (linha != 1){
             excluir();
+        } else {
+            JOptionPane.showMessageDialog(this, "Por favor, selecione a especialidade que deseja editar!", "Especialidade", JOptionPane.WARNING_MESSAGE);
         }
+ 
         
     }//GEN-LAST:event_ExcluirMedicoActionPerformed
+
+    private void EditarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarMedicoActionPerformed
+         linha = TableMedico.getSelectedRow();
+
+        if (linha != -1) {
+            editar();
+        } else {
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Por favor, selecione a especialidade que deseja editar!",
+                    "Especialidade",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+
+    }//GEN-LAST:event_EditarMedicoActionPerformed
+
+    private void AdicionarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdicionarMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AdicionarMedicoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -116,12 +149,68 @@ public class MedicoPanel extends javax.swing.JPanel {
     private javax.swing.JButton EditarMedico;
     private javax.swing.JButton ExcluirMedico;
     private javax.swing.JTable TableMedico;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelmedico;
+    private javax.swing.JScrollPane scrolltablemedico;
     // End of variables declaration//GEN-END:variables
 
     private void criarTabelaMedico() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+         TableMedico.setModel(EspecialidadeDAO.getTableModel());
+
+            // Desativar o redimensionamento da JTable
+            TableMedico.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+            // Definir a largura de cada coluna
+            TableMedico.getColumnModel().getColumn(0).setPreferredWidth(100);
+            TableMedico.getColumnModel().getColumn(1).setPreferredWidth(300);
+            TableMedico.getColumnModel().getColumn(2).setPreferredWidth(300);
+
+            // Impedir/bloquear a movimentação das colunas
+            TableMedico.getTableHeader().setReorderingAllowed(false);
+
+            // Bloquear edição das células
+            TableMedico.setDefaultEditor(Object.class, null);
+            
+       
+
+    }
+
+    private void excluir() {
+       int resposta = JOptionPane.showConfirmDialog(
+                this,
+                "Você confirma a exclusão da especialidade selecionado?",
+                "Especialidade",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+
+        // Excluir plano de saúde
+        if (resposta == 0) {
+
+            EspecialidadeDAO.excluir(getCodigo());
+            criarTabelaMedico();
+            
     }
 }
+
+    private Integer getCodigo() {
+String codigoStr = TableMedico.getValueAt(linha, 0).toString();
+        return Integer.valueOf(codigoStr);    
+    }
+
+    private void editar() {
+         Medico medico = new Medico();
+
+        MedicoDialog medicoDialog = new MedicoDialog();
+
+        medicoDialog.setVisible(true);
+
+        criarTabelaMedico();
+        
+        
+        
+    }
+}
+
+
+
+
