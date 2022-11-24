@@ -32,24 +32,24 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField2" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="textCodigo" min="-2" pref="120" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jTextField3" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="textCRM" min="-2" pref="120" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="jTextField4" max="32767" attributes="0"/>
+                          <Component id="textNomeMedico" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jTextField9" alignment="1" min="-2" pref="216" max="-2" attributes="0"/>
-                              <Component id="jTextField5" min="-2" pref="230" max="-2" attributes="0"/>
+                              <Component id="textTelefone" min="-2" pref="230" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jTextField8" min="-2" pref="290" max="-2" attributes="0"/>
+                              <Component id="textEmail" min="-2" pref="290" max="-2" attributes="0"/>
                               <Component id="jTextField10" min="-2" pref="196" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextField7" pref="84" max="32767" attributes="0"/>
+                          <Component id="textDataNascimento" pref="84" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -61,15 +61,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jTextField3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jTextField4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textCodigo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textCRM" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="textNomeMedico" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField5" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jTextField7" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jTextField8" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="textTelefone" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="textDataNascimento" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="textEmail" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -82,35 +82,35 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="textCodigo">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="textCRM">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textCRMActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="textNomeMedico">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="textTelefone">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField5"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
+        <Component class="javax.swing.JTextField" name="textDataNascimento">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
+        <Component class="javax.swing.JTextField" name="textEmail">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField8"/>
           </Properties>
@@ -127,13 +127,13 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JLabel" name="labelTitulo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="670" height="80"/>
+          <AbsoluteConstraints x="0" y="0" width="660" height="90"/>
         </Constraint>
       </Constraints>
     </Component>

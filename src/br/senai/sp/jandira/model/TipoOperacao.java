@@ -9,7 +9,7 @@ package br.senai.sp.jandira.model;
  * @author 22282099
  */
 public enum TipoOperacao {
-    ALTERAR, ADICIONAR;
+    ALTERAR, ADICIONAR, EDITAR;
     
     
 }
