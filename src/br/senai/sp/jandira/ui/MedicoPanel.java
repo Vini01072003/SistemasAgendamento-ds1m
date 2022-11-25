@@ -18,6 +18,7 @@ import javax.swing.JTable;
 public class MedicoPanel extends javax.swing.JPanel {
 
     int linha;
+    private Object tableMedicos;
     /**
      * Creates new form MedicoPanel
      */
@@ -110,6 +111,7 @@ private void TableMedicoexcluir(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 
     private void buttonExcluirMedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonExcluirMedicoMouseClicked
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_buttonExcluirMedicoMouseClicked
     
     private void ExcluirMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirMedicoActionPerformed
@@ -141,6 +143,14 @@ private void TableMedicoexcluir(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
 
     private void AdicionarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdicionarMedicoActionPerformed
         // TODO add your handling code here:
+         MedicoDialog medicoDialog = new MedicoDialog(
+                null,
+                true,
+                TipoOperacao.ADICIONAR,
+                null);
+        medicoDialog.setVisible(true);
+
+        criarTabelaMedicos();
     }//GEN-LAST:event_AdicionarMedicoActionPerformed
 
 
@@ -153,27 +163,7 @@ private void TableMedicoexcluir(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
     private javax.swing.JScrollPane scrolltablemedico;
     // End of variables declaration//GEN-END:variables
 
-    private void criarTabelaMedico() {
-        
-         TableMedico.setModel(EspecialidadeDAO.getTableModel());
 
-            // Desativar o redimensionamento da JTable
-            TableMedico.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-
-            // Definir a largura de cada coluna
-            TableMedico.getColumnModel().getColumn(0).setPreferredWidth(100);
-            TableMedico.getColumnModel().getColumn(1).setPreferredWidth(300);
-            TableMedico.getColumnModel().getColumn(2).setPreferredWidth(300);
-
-            // Impedir/bloquear a movimentação das colunas
-            TableMedico.getTableHeader().setReorderingAllowed(false);
-
-            // Bloquear edição das células
-            TableMedico.setDefaultEditor(Object.class, null);
-            
-       
-
-    }
 
     private void excluir() {
        int resposta = JOptionPane.showConfirmDialog(
@@ -209,7 +199,33 @@ String codigoStr = TableMedico.getValueAt(linha, 0).toString();
         
         
     }
+
+  
+
+    private void criarTabelaMedicos() {
+    
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  tableMedicos.setModel(MedicoDAO.getTableModel());
+
+        // Desativar o redimensionamento da JTable
+        tableMedicos.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+        // Definir a largura de cada coluna
+        tableMedicos.getColumnModel().getColumn(0).setPreferredWidth(100);
+        tableMedicos.getColumnModel().getColumn(1).setPreferredWidth(100);
+        tableMedicos.getColumnModel().getColumn(2).setPreferredWidth(300);
+        tableMedicos.getColumnModel().getColumn(3).setPreferredWidth(200);
+        
+
+        // Impedir/bloquear a movimentação das colunas
+        tableMedicos.getTableHeader().setReorderingAllowed(false);
+
+        // Bloquear edição das células
+        tableMedicos.setDefaultEditor(Object.class, null);        
+    }
+    
 }
+
 
 
 

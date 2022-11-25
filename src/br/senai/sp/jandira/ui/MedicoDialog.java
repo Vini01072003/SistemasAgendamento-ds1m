@@ -4,10 +4,24 @@
  */
 package br.senai.sp.jandira.ui;
 
+import br.senai.sp.jandira.dao.EspecialidadeDAO;
+import br.senai.sp.jandira.dao.MedicoDAO;
+import br.senai.sp.jandira.model.Especialidade;
 import br.senai.sp.jandira.model.Medico;
 import br.senai.sp.jandira.model.TipoOperacao;
+import java.awt.Frame;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ListModel;
 
 /**
  *
@@ -20,12 +34,35 @@ public class MedicoDialog extends javax.swing.JPanel {
     private DefaultListModel<String> especialidadesMedicoModel = new DefaultListModel<>();
     private ArrayList<String> especialidadesMedico = new ArrayList<>();
     private Object textCrm;
+    private JLabel jLabel8;
+    private JLabel jLabel7;
+    private JLabel jLabel6;
+    private JLabel jLabel5;
+    private JLabel jLabel4;
+    private JLabel jLabel3;
+    private JLabel jLabel2;
+    private JLabel jLabel1;
+    private JButton buttonSalvar1;
+    private JButton buttonCancelar1;
+    private JButton buttonAdicionarEspecialidade;
+    private JButton buttonRemoverEspecialidade;
+    private JList<Object> listEspecialidade;
+    private JScrollPane scrollListaEspecialidade;
+    private JList<Object> listEspecialidadeMedico;
+    private JScrollPane scrollListaEspecialidadeMedico;
+    private JPanel adicionarMedicoPanel;
 
     /**
      * Creates new form MedicoDialog
      */
     public MedicoDialog() {
-        initComponents();
+       
+          initComponents();
+    
+        
+        
+        
+        
         
         
          if (tipoOperacao == TipoOperacao.EDITAR) {
@@ -34,8 +71,12 @@ public class MedicoDialog extends javax.swing.JPanel {
     
     }
 
+    MedicoDialog(Object object, boolean b, TipoOperacao tipoOperacao, Object object0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,6 +95,8 @@ public class MedicoDialog extends javax.swing.JPanel {
         textEmail = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
+        buttonSalvar = new javax.swing.JButton();
+        buttonCancelar = new javax.swing.JButton();
         labelTitulo = new javax.swing.JLabel();
 
         setLayout(null);
@@ -79,6 +122,10 @@ public class MedicoDialog extends javax.swing.JPanel {
 
         jTextField10.setText("jTextField10");
 
+        buttonSalvar.setText("jButton2");
+
+        buttonCancelar.setText("jButton1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -103,6 +150,12 @@ public class MedicoDialog extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(textDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(buttonCancelar)
+                .addGap(30, 30, 30)
+                .addComponent(buttonSalvar)
+                .addGap(41, 41, 41))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +174,11 @@ public class MedicoDialog extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                     .addComponent(jTextField10))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonSalvar)
+                    .addComponent(buttonCancelar))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         add(jPanel1);
@@ -138,6 +195,8 @@ public class MedicoDialog extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonCancelar;
+    private javax.swing.JButton buttonSalvar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField9;
@@ -150,13 +209,188 @@ public class MedicoDialog extends javax.swing.JPanel {
     private javax.swing.JTextField textTelefone;
     // End of variables declaration//GEN-END:variables
 
+ 
+    private void initComponents() {
+     adicionarMedicoPanel = new javax.swing.JPanel();
+        labelTitulo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        textCrm = new javax.swing.JTextField();
+        textNomeMedico = new javax.swing.JTextField();
+        textCodigo = new javax.swing.JTextField();
+        textTelefone = new javax.swing.JTextField();
+        textEmail = new javax.swing.JTextField();
+        scrollListaEspecialidadeMedico = new javax.swing.JScrollPane();
+        listEspecialidadeMedico = new javax.swing.JList<>();
+        scrollListaEspecialidade = new javax.swing.JScrollPane();
+        listEspecialidade = new javax.swing.JList<>();
+        buttonRemoverEspecialidade = new javax.swing.JButton();
+        buttonAdicionarEspecialidade = new javax.swing.JButton();
+        buttonCancelar1 = new javax.swing.JButton();
+        buttonSalvar1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        textDataNascimento = new javax.swing.JFormattedTextField();
+    }
+      private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelar1ActionPerformed
+
+        dispose();
+    }//GEN-LAST:event_buttonCancelar1ActionPerformed
+   private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvar1ActionPerformed
+
+        if (tipoOperacao == tipoOperacao.ADICIONAR) {
+            gravar();
+        } else {
+            editar();
+        }
+    }//GEN-LAST:event_buttonSalvar1ActionPerformed
+        private void textDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textDataNascimentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textDataNascimentoActionPerformed
+          private void buttonAdicionarEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAdicionarEspecialidadeActionPerformed
+
+        List<Object> especialidade = listEspecialidade.getSelectedValuesList(); // Usar esse aqui
+
+        especialidadesMedicoModel.clear();
+        for (Object percorrer : especialidade) {
+            especialidadesMedico.add((String) percorrer);
+        }
+        especialidadesMedicoModel.clear();
+        especialidadesMedicoModel.addAll(especialidadesMedico);
+        listEspecialidadeMedico.setModel((ListModel<Object>) especialidadesMedico);
+        
+       
+
+    }//GEN-LAST:event_buttonAdicionarEspecialidadeActionPerformed
+         private void buttonRemoverEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRemoverEspecialidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRemoverEspecialidadeActionPerformed 
+      
+      
+    private void dispose() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void gravar() {
+        Medico medico = new Medico();
+        medico.setCrm(textCRM.getText());
+        medico.setNome(textNomeMedico.getText());
+        medico.setTelefone(textTelefone.getText());
+        medico.setEmail(textEmail.getText());
+        medico.setDataNascimento(LocalDate.parse(textDataNascimento.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+//        medico.setEspecialidades();
+
+        if (validarCadastro()) {
+
+            MedicoDAO.gravar(medico);
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Médico gravado com sucesso",
+                    "Médico",
+                    JOptionPane.INFORMATION_MESSAGE);
+            dispose();
+        }
+    }
+
+    private void editar() {
+    medico.setCrm(textCrm.getText());
+        medico.setNome(textNomeMedico.getText());
+        medico.setTelefone(textTelefone.getText());
+        medico.setEmail(textEmail.getText());
+        medico.setDataNascimento(LocalDate.parse(textDataNascimento.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+
+        if (validarCadastro()) {
+            MedicoDAO.editar(medico);
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Médico atualizado com sucesso",
+                    "Medico",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+            dispose();
+        }
+    }
+
     private void preencherFormulario() {
- labelTitulo.setText("Médico - " + tipoOperacao);
+         labelTitulo.setText("Médico - " + tipoOperacao);
         textCodigo.setText(medico.getCodigo().toString());
-        textCrm.setText(medico.getCrm());
+        textCRM.setText(medico.getCrm());
         textNomeMedico.setText(medico.getNome());
         textTelefone.setText(medico.getTelefone());
         textEmail.setText(medico.getEmail());
-        textDataNascimento.setText(medico.getDataNascimento());
+        textDataNascimento.setText(medico.getDataNascimentoComBarra());
+     
     }
+
+    private boolean validarCadastro() {
+        if (textCrm.getText().isEmpty()) {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Por favor preencha o crm!",
+                    "Medico",
+                    JOptionPane.ERROR_MESSAGE);
+
+            textCrm.requestFocus();
+            return false;
+        }
+
+        if (textNomeMedico.getText().isEmpty()) {
+
+            JOptionPane.showMessageDialog(
+                    this,
+                    "Por favor preencha o nome!",
+                    "Medico",
+                    JOptionPane.ERROR_MESSAGE);
+            textNomeMedico.requestFocus();
+            return false;
+        }
+        return true;
+    }
+     private void carregarEspecalidades() {
+
+        for (Especialidade percorrer : EspecialidadeDAO.listarTodos()) {
+            listaTodasEspecialidadesModel.addElement((String) percorrer.getNome());
+        }
+
+        listEspecialidade.setModel(listaTodasEspecialidadesModel);
+    
+    
 }
+}
+ // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel adicionarMedicoPanel;
+    private javax.swing.JButton buttonAdicionarEspecialidade;
+    private javax.swing.JButton buttonCancelar1;
+    private javax.swing.JButton buttonRemoverEspecialidade;
+    private javax.swing.JButton buttonSalvar1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelTitulo;
+    private javax.swing.JList<String> listEspecialidade;
+    private javax.swing.JList<String> listEspecialidadeMedico;
+    private javax.swing.JScrollPane scrollListaEspecialidade;
+    private javax.swing.JScrollPane scrollListaEspecialidadeMedico;
+    private javax.swing.JTextField textCodigo;
+    private javax.swing.JTextField textCrm;
+    private javax.swing.JFormattedTextField textDataNascimento;
+    private javax.swing.JTextField textEmail;
+    private javax.swing.JTextField textNomeMedico;
+    private javax.swing.JTextField textTelefone;
+    // End of variables declaration//GEN-END:variables
+}
+
+
