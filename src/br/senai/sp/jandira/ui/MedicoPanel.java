@@ -150,7 +150,7 @@ private void TableMedicoexcluir(java.awt.event.MouseEvent evt) {//GEN-FIRST:even
                 null);
         medicoDialog.setVisible(true);
 
-        criarTabelaMedicos();
+        criarTabelaMedico();
     }//GEN-LAST:event_AdicionarMedicoActionPerformed
 
 
@@ -202,29 +202,36 @@ String codigoStr = TableMedico.getValueAt(linha, 0).toString();
 
   
 
-    private void criarTabelaMedicos() {
-    
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-  tableMedicos.setModel(MedicoDAO.getTableModel());
+  
 
-        // Desativar o redimensionamento da JTable
-        tableMedicos.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        // Definir a largura de cada coluna
-        tableMedicos.getColumnModel().getColumn(0).setPreferredWidth(100);
-        tableMedicos.getColumnModel().getColumn(1).setPreferredWidth(100);
-        tableMedicos.getColumnModel().getColumn(2).setPreferredWidth(300);
-        tableMedicos.getColumnModel().getColumn(3).setPreferredWidth(200);
-        
 
-        // Impedir/bloquear a movimentação das colunas
-        tableMedicos.getTableHeader().setReorderingAllowed(false);
-
-        // Bloquear edição das células
-        tableMedicos.setDefaultEditor(Object.class, null);        
+    private void criarTabelaMedico() {
+      TableMedico.setModel(MedicoDAO.getTableModel());
+      
+      
+      
+      TableMedico.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+      
+      
+      TableMedico.getColumnModel().getColumn(0).setPreferredWidth(100);
+      TableMedico.getColumnModel().getColumn(1).setPreferredWidth(100);
+      TableMedico.getColumnModel().getColumn(2).setPreferredWidth(300);
+      TableMedico.getColumnModel().getColumn(3).setPreferredWidth(200);
+   
+      
+      TableMedico.getTableHeader().setReorderingAllowed(false);
+      
+      TableMedico.setDefaultEditor(Object.class, null);
+      
     }
     
-}
+   
+    
+    
+    }
+    
+
 
 
 
