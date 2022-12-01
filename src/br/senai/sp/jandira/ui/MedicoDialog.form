@@ -40,7 +40,7 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="buttonCncelar1" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="buttonCancelar1" min="-2" pref="124" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                           <Component id="buttonSalvar1" min="-2" pref="113" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
@@ -128,7 +128,7 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="buttonCncelar1" pref="66" max="32767" attributes="0"/>
+                      <Component id="buttonCancelar1" pref="66" max="32767" attributes="0"/>
                       <Component id="buttonSalvar1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -137,12 +137,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="buttonCncelar1">
+        <Component class="javax.swing.JButton" name="buttonCancelar1">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCncelar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCancelar1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="buttonSalvar1">
